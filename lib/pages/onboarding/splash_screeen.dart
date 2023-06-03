@@ -32,7 +32,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'assects/images/splash_screen/splash_Screen_image.png',
+            'assects/images/splash_screen/logo.png',
           ),
           Text(
             'FoodNinja',
@@ -44,7 +44,8 @@ class _Splash_ScreenState extends State<Splash_Screen> {
             style: TextStyle(fontSize: 15, color: Colors.black54),
           )
         ],
-      )),
+           )
+      ),
     );
   }
 }

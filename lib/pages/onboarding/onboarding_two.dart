@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/customButton.dart';
-import 'onboarding_two.dart';
+import '../authentication/sign-up.dart';
 
-class OnBoardingOne extends StatefulWidget {
-  const OnBoardingOne({Key? key}) : super(key: key);
+class OnBoardingTwo extends StatefulWidget {
+  const OnBoardingTwo({Key? key}) : super(key: key);
 
   @override
-  State<OnBoardingOne> createState() => _OnBoardingOneState();
+  State<OnBoardingTwo> createState() => _OnBoardingTwoState();
 }
 
-class _OnBoardingOneState extends State<OnBoardingOne> {
+class _OnBoardingTwoState extends State<OnBoardingTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(
           children: [
-            Image.asset('assects/images/onboarding/onboarding.png'),
+            Image.asset('assects/images/onboarding/onboardingTwo.png'),
             Spacer(),
             Column(
               children: [
                 const Text(
-                  'Find your Confort\nFood here',
+                  'food Ninja is Where your\nConfort Food Lives',
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
@@ -32,7 +32,7 @@ class _OnBoardingOneState extends State<OnBoardingOne> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Text(
-                    'Here YOu Can find a chef or dish for every\ntast and color. Enjoy!',
+                    'Enjoy a fast and smooth food delivery at\nyour doorstep',
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -41,18 +41,19 @@ class _OnBoardingOneState extends State<OnBoardingOne> {
                 ),
                 CustomButton(
                   text: 'Next',
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoardingTwo()));
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SginUp()));
                   },
                 ),
-                SizedBox(height: 50,),
+                SizedBox(
+                  height: 50,
+                )
               ],
-            ),
+            )
           ],
         ),
       ),
     );
   }
 }
-
-
