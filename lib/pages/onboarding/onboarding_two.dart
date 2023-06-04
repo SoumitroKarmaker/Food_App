@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/customButton.dart';
-import '../authentication/sign-up.dart';
+import '../authentication/sign_in.dart';
 
 class OnBoardingTwo extends StatefulWidget {
   const OnBoardingTwo({Key? key}) : super(key: key);
@@ -43,7 +43,7 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
                   text: 'Next',
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SginUp()));
+                        MaterialPageRoute(builder: (context) => SignIn()));
                   },
                 ),
                 SizedBox(

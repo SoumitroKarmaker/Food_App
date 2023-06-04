@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nb_utils/nb_utils.dart';
 
 import 'onboarding_one.dart';
 
@@ -10,19 +11,17 @@ class Splash_Screen extends StatefulWidget {
 }
 
 class _Splash_ScreenState extends State<Splash_Screen> {
-
   @override
   void initState() {
     super.initState();
     goToHome();
   }
+
   Future<void> goToHome() async {
-    await Future.delayed(Duration(seconds: 5));
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => OnBoardingOne()));
+    await Future.delayed(Duration(seconds: 5)).then((value) =>
+        const OnBoardingOne().launch(context,
+            isNewTask: true, pageRouteAnimation: PageRouteAnimation.Scale));
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +43,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
             style: TextStyle(fontSize: 15, color: Colors.black54),
           )
         ],
-           )
-      ),
+      )),
     );
   }
 }
