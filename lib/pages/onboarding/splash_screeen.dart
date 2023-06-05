@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/const_data/app_colors.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import 'onboarding_one.dart';
@@ -36,7 +37,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
           Text(
             'FoodNinja',
             style: TextStyle(
-                fontSize: 30, fontWeight: FontWeight.bold, color: Colors.green),
+                fontSize: 30, fontWeight: FontWeight.bold, color: AppColor.mainColor),
           ),
           Text(
             'Deliever Favourite Food',

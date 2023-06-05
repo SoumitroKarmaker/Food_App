@@ -17,7 +17,7 @@ class _OnBoardingOneState extends State<OnBoardingOne> {
       body: Center(
         child: Column(
           children: [
-            Image.asset('assects/images/onboarding/onboarding.png'),
+            Image.asset('assects/images_and_logo/onboarding/onboarding.png'),
             Spacer(),
             Column(
               children: [

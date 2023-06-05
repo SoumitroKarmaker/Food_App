@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 
+import '../../const_data/app_colors.dart';
+
 class SginUp extends StatefulWidget {
   const SginUp({Key? key}) : super(key: key);
 
@@ -30,7 +32,7 @@ class _SginUpState extends State<SginUp> {
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Colors.green),
+                    color: AppColor.mainColor),
               ),
               Text(
                 'Deliever Favourite Food',

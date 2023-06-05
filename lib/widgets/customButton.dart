@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
+  final double ? width;
   final VoidCallback onTap;
-  const CustomButton({super.key, required this.text, required this.onTap});
+  const CustomButton({super.key, required this.text, required this.onTap, this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class CustomButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         height: 50,
-        width: 100,
+        width: width ?? 100,
         decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
@@ -21,7 +22,8 @@ class CustomButton extends StatelessWidget {
                   color: Colors.greenAccent)
             ],
             borderRadius: BorderRadius.circular(10),
-            gradient: LinearGradient(colors: [Color(0xff53E88d), Color(0xff15BE77)])),
+            gradient:
+                LinearGradient(colors: [Color(0xff53E88d), Color(0xff15BE77)])),
         child: Center(
             child: Text(
           text,
@@ -32,4 +34,3 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
-

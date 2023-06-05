@@ -17,7 +17,7 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
       body: Center(
         child: Column(
           children: [
-            Image.asset('assects/images/onboarding/onboardingTwo.png'),
+            Image.asset('assects/images_and_logo/onboarding/onboardingTwo.png'),
             Spacer(),
             Column(
               children: [
