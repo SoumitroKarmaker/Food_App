@@ -14,44 +14,46 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-            Image.asset('assects/images_and_logo/onboarding/onboardingTwo.png'),
-            Spacer(),
-            Column(
-              children: [
-                const Text(
-                  'food Ninja is Where your\nConfort Food Lives',
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Text(
-                    'Enjoy a fast and smooth food delivery at\nyour doorstep',
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              Image.asset('assects/images_and_logo/onboarding/onboardingTwo.png'),
+              SizedBox(height: 20,),
+              Column(
+                children: [
+                  const Text(
+                    'food Ninja is Where your\nConfort Food Lives',
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                CustomButton(
-                  text: 'Next',
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SignIn()));
-                  },
-                ),
-                SizedBox(
-                  height: 50,
-                )
-              ],
-            )
-          ],
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Text(
+                      'Enjoy a fast and smooth food delivery at\nyour doorstep',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  CustomButton(
+                    text: 'Next',
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => SignIn()));
+                    },
+                  ),
+                  SizedBox(
+                    height: 50,
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

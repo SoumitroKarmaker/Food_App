@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/pages/authentication/sign-up.dart';
+import 'package:food_app/pages/authentication/signIn_Process.dart';
 import 'package:food_app/widgets/customButton.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'dart:ui';
@@ -20,7 +21,7 @@ class SignIn extends StatelessWidget {
               children: [
                 SizedBox(
                   width: double.infinity,
-                  height: 20,
+                  height: 10,
                 ),
                 Image.asset(
                   'assects/images_and_logo/splash_screen/logo.png',
@@ -177,7 +178,7 @@ class SignIn extends StatelessWidget {
                     child: Image.asset(
                         'assects/images_and_logo/accessories_logo_and_icon/google.png')),
                 SizedBox(width: 7,),
-                Text('Facebook', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
+                Text('Google', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
               ],
             ),
           ),
@@ -199,12 +200,16 @@ class SignIn extends StatelessWidget {
                 CustomButton(
                     text: 'Login',
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => SginUp()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignIn_Process()));
                     }),
                 SizedBox(
-                  height: 50,
+                  height: 30,
                 ),
+                GestureDetector(onTap: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SginUp()));
+                },
+                    child: Text('Create an account',style: TextStyle(color: Colors.red),)),
               ],
             ),
           ),

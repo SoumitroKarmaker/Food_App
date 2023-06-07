@@ -32,7 +32,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'assects/images/splash_screen/logo.png',
+            'assects/images_and_logo/splash_screen/logo.png',
           ),
           Text(
             'FoodNinja',
