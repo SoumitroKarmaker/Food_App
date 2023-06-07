@@ -41,7 +41,7 @@ class _SignIn_ProcessState extends State<SignIn_Process> {
                 ),
                 SizedBox(height: 15,),
                 Text(
-                  'Fill',
+                  'Fill in our bio to get\nstarted',
                   style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
@@ -142,7 +142,13 @@ class _SignIn_ProcessState extends State<SignIn_Process> {
                   ),
                 ),
                 SizedBox(height: 15,),
-                CustomButton(text: 'text', onTap: (){})
+                Row(mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CustomButton(text: 'Next', onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ))
+                    }),
+                  ],
+                )
 
               ],
             ),
