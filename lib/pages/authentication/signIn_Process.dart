@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:food_app/widgets/customButton.dart';
 import 'package:nb_utils/nb_utils.dart';
 
+import '../setpu pages/payment_method.dart';
+
 class SignIn_Process extends StatefulWidget {
   const SignIn_Process({Key? key}) : super(key: key);
 
@@ -34,9 +36,9 @@ class _SignIn_ProcessState extends State<SignIn_Process> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.green.withOpacity(0.2),
                     ),
-                      child: Align(
+                    child: Align(
                         alignment: Alignment.center,
-                          child: Icon(Icons.arrow_back_ios)),
+                        child: Icon(Icons.arrow_back_ios)),
                   ),
                 ),
                 SizedBox(height: 15,),
@@ -145,7 +147,7 @@ class _SignIn_ProcessState extends State<SignIn_Process> {
                 Row(mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CustomButton(text: 'Next', onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => ))
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => Payment_Method()));
                     }),
                   ],
                 )

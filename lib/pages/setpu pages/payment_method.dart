@@ -1,22 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/pages/setpu%20pages/upload_photo.dart';
 import 'package:food_app/widgets/customButton.dart';
-import 'package:nb_utils/nb_utils.dart';
 
-class Payment_Method extends StatefulWidget {
+class Payment_Method extends StatelessWidget {
   const Payment_Method({Key? key}) : super(key: key);
 
   @override
-  State<Payment_Method> createState() => _Payment_MethodState();
-}
-
-class _Payment_MethodState extends State<Payment_Method> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -24,7 +19,7 @@ class _Payment_MethodState extends State<Payment_Method> {
                   height: 30,
                 ),
                 GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     Navigator.pop(context);
                   },
                   child: Container(
@@ -39,9 +34,11 @@ class _Payment_MethodState extends State<Payment_Method> {
                         child: Icon(Icons.arrow_back_ios)),
                   ),
                 ),
-                SizedBox(height: 15,),
+                SizedBox(
+                  height: 15,
+                ),
                 Text(
-                  'Fill in our bio to get\nstarted',
+                  'Payment Method',
                   style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
@@ -54,102 +51,101 @@ class _Payment_MethodState extends State<Payment_Method> {
                   'This data will be desplayed in your account\nprofile for security',
                   style: TextStyle(fontSize: 16),
                 ),
-                SizedBox(height: 20,),
-                Container(
-                  // this container for apptextfield shadow
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey
-                            .withOpacity(0.2), // Set the shadow color
-                        spreadRadius: 2, // Set the spread radius
-                        blurRadius: 10, // Set the blur radius
-                        offset: Offset(0, 2), // Set the shadow offset
-                      ),
-                    ],
-                  ),
-                  child: AppTextField(
-                    textFieldType: TextFieldType.NAME,
-                    decoration: InputDecoration(
-                      fillColor: Colors.white,
-                      filled: true,
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15),
-                          borderSide: BorderSide(
-                              color: Color(0xff15BE77).withOpacity(0.4),
-                              width: 1)),
-                      hintText: 'First Name',
-                    ),
-                  ),
+                SizedBox(
+                  height: 20,
                 ),
-                SizedBox(height: 20,),
-                Container(
-                  // this container for apptextfield shadow
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey
-                            .withOpacity(0.2), // Set the shadow color
-                        spreadRadius: 2, // Set the spread radius
-                        blurRadius: 10, // Set the blur radius
-                        offset: Offset(0, 2), // Set the shadow offset
-                      ),
-                    ],
-                  ),
-                  child: AppTextField(
-                    textFieldType: TextFieldType.NAME,
-                    decoration: InputDecoration(
-                      fillColor: Colors.white,
-                      filled: true,
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15),
-                          borderSide: BorderSide(
-                              color: Color(0xff15BE77).withOpacity(0.4),
-                              width: 1)),
-                      hintText: 'Last Name',
-                    ),
-                  ),
-                ),
-                SizedBox(height: 15,),
-                Container(
-                  // this container for apptextfield shadow
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey
-                            .withOpacity(0.2), // Set the shadow color
-                        spreadRadius: 2, // Set the spread radius
-                        blurRadius: 10, // Set the blur radius
-                        offset: Offset(0, 2), // Set the shadow offset
-                      ),
-                    ],
-                  ),
-                  child: AppTextField(
-                    textFieldType: TextFieldType.NUMBER,
-                    decoration: InputDecoration(
-                      fillColor: Colors.white,
-                      filled: true,
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15),
-                          borderSide: BorderSide(
-                              color: Color(0xff15BE77).withOpacity(0.4),
-                              width: 1)),
-                      hintText: 'Mobile Number',
-                    ),
-                  ),
-                ),
-                SizedBox(height: 15,),
-                Row(mainAxisAlignment: MainAxisAlignment.center,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    CustomButton(text: 'Next', onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => ))
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey
+                                .withOpacity(0.2), // Set the shadow color
+                            spreadRadius: 2, // Set the spread radius
+                            blurRadius: 10, // Set the blur radius
+                            offset: Offset(0, 2), // Set the shadow offset
+                          ),
+                        ],
+                      ),
+                      height: 70,
+                      width: MediaQuery.of(context).size.width,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Image.asset(
+                          'assects/images_and_logo/accessories_logo_and_icon/paypal.png',
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey
+                                .withOpacity(0.2), // Set the shadow color
+                            spreadRadius: 2, // Set the spread radius
+                            blurRadius: 10, // Set the blur radius
+                            offset: Offset(0, 2), // Set the shadow offset
+                          ),
+                        ],
+                      ),
+                      height: 70,
+                      width: MediaQuery.of(context).size.width,
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Image.asset(
+                          'assects/images_and_logo/accessories_logo_and_icon/visa.png',
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey
+                                .withOpacity(0.2), // Set the shadow color
+                            spreadRadius: 2, // Set the spread radius
+                            blurRadius: 10, // Set the blur radius
+                            offset: Offset(0, 2), // Set the shadow offset
+                          ),
+                        ],
+                      ),
+                      height: 70,
+                      width: MediaQuery.of(context).size.width,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Image.asset(
+                          'assects/images_and_logo/accessories_logo_and_icon/payoneer.png',
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    CustomButton(text: 'Next', onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => Upload_Photo()));
                     }),
+                    SizedBox(
+                      height: 30,
+                    ),
                   ],
                 )
-
               ],
             ),
           ),
