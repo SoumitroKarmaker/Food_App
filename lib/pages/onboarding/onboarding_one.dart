@@ -19,7 +19,7 @@ class _OnBoardingOneState extends State<OnBoardingOne> {
           child: Column(
             children: [
               Image.asset('assects/images_and_logo/onboarding/onboarding.png'),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Column(
                 children: [
                   const Text(
@@ -27,26 +27,26 @@ class _OnBoardingOneState extends State<OnBoardingOne> {
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25.0),
                     child: Text(
                       'Here YOu Can find a chef or dish for every\ntast and color. Enjoy!',
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   CustomButton(
                     text: 'Next',
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoardingTwo()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const OnBoardingTwo()));
                     },
                   ),
-                  SizedBox(height: 50,),
+                  const SizedBox(height: 50,),
                 ],
               ),
             ],

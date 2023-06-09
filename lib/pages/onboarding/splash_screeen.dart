@@ -19,7 +19,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
   }
 
   Future<void> goToHome() async {
-    await Future.delayed(Duration(seconds: 5)).then((value) =>
+    await Future.delayed(const Duration(seconds: 5)).then((value) =>
         const OnBoardingOne().launch(context,
             isNewTask: true, pageRouteAnimation: PageRouteAnimation.Scale));
   }
@@ -34,12 +34,12 @@ class _Splash_ScreenState extends State<Splash_Screen> {
           Image.asset(
             'assects/images_and_logo/splash_screen/logo.png',
           ),
-          Text(
+          const Text(
             'FoodNinja',
             style: TextStyle(
                 fontSize: 30, fontWeight: FontWeight.bold, color: AppColor.mainColor),
           ),
-          Text(
+          const Text(
             'Deliever Favourite Food',
             style: TextStyle(fontSize: 15, color: Colors.black54),
           )

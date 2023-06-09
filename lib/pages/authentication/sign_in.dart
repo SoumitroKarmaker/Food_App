@@ -3,7 +3,6 @@ import 'package:food_app/pages/authentication/sign-up.dart';
 import 'package:food_app/pages/authentication/signIn_Process.dart';
 import 'package:food_app/widgets/customButton.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'dart:ui';
 
 import '../../const_data/app_colors.dart';
 
@@ -19,32 +18,32 @@ class SignIn extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: double.infinity,
                   height: 10,
                 ),
                 Image.asset(
                   'assects/images_and_logo/splash_screen/logo.png',
                 ),
-                Text(
+                const Text(
                   'FoodNinja',
                   style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       color: AppColor.mainColor),
                 ),
-                Text(
+                const Text(
                   'Deliever Favourite Food',
                   style: TextStyle(fontSize: 15, color: Colors.black54),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   'Login To Your Acount',
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
@@ -57,7 +56,7 @@ class SignIn extends StatelessWidget {
                             .withOpacity(0.2), // Set the shadow color
                         spreadRadius: 2, // Set the spread radius
                         blurRadius: 10, // Set the blur radius
-                        offset: Offset(0, 2), // Set the shadow offset
+                        offset: const Offset(0, 2), // Set the shadow offset
                       ),
                     ],
                   ),
@@ -69,13 +68,13 @@ class SignIn extends StatelessWidget {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
-                              color: Color(0xff15BE77).withOpacity(0.4),
+                              color: const Color(0xff15BE77).withOpacity(0.4),
                               width: 1)),
                       hintText: 'Email',
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
@@ -88,7 +87,7 @@ class SignIn extends StatelessWidget {
                             .withOpacity(0.2), // Set the shadow color
                         spreadRadius: 2, // Set the spread radius
                         blurRadius: 10, // Set the blur radius
-                        offset: Offset(0, 2), // Set the shadow offset
+                        offset: const Offset(0, 2), // Set the shadow offset
                       ),
                     ],
                   ),
@@ -100,20 +99,20 @@ class SignIn extends StatelessWidget {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
-                              color: Color(0xff15BE77).withOpacity(0.4),
+                              color: const Color(0xff15BE77).withOpacity(0.4),
                               width: 1)),
                       hintText: 'Password',
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Text(
+                const Text(
                   'Or Continue With',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Row(
@@ -131,7 +130,7 @@ class SignIn extends StatelessWidget {
                                 .withOpacity(0.2), // Set the shadow color
                             spreadRadius: 2, // Set the spread radius
                             blurRadius: 10, // Set the blur radius
-                            offset: Offset(0, 2), // Set the shadow offset
+                            offset: const Offset(0, 2), // Set the shadow offset
                           ),
                         ],
                       ),
@@ -140,16 +139,16 @@ class SignIn extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Container(
+                            SizedBox(
                               height: MediaQuery.of(context).size.height/2,
                                 child: Image.asset(
                                     'assects/images_and_logo/accessories_logo_and_icon/facebook.png')),
-                            Text('Facebook', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
+                            const Text('Facebook', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Container(
@@ -164,7 +163,7 @@ class SignIn extends StatelessWidget {
                                 .withOpacity(0.2), // Set the shadow color
                             spreadRadius: 2, // Set the spread radius
                             blurRadius: 10, // Set the blur radius
-                            offset: Offset(0, 2), // Set the shadow offset
+                            offset: const Offset(0, 2), // Set the shadow offset
                           ),
                         ],
                       ),
@@ -173,12 +172,12 @@ class SignIn extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                     height:35,
                     child: Image.asset(
                         'assects/images_and_logo/accessories_logo_and_icon/google.png')),
-                SizedBox(width: 7,),
-                Text('Google', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
+                const SizedBox(width: 7,),
+                const Text('Google', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
               ],
             ),
           ),
@@ -186,30 +185,30 @@ class SignIn extends StatelessWidget {
 
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Text('Forgot Your Password ?',
+                const Text('Forgot Your Password ?',
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         color: AppColor.mainColor)),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 CustomButton(
                     text: 'Login',
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignIn_Process()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const SignIn_Process()));
                     }),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 GestureDetector(onTap: (){
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SginUp()));
+                      MaterialPageRoute(builder: (context) => const SginUp()));
                 },
-                    child: Text('Create an account',style: TextStyle(color: Colors.red),)),
+                    child: const Text('Create an account',style: TextStyle(color: Colors.red),)),
               ],
             ),
           ),

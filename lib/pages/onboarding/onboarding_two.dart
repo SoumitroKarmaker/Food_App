@@ -19,7 +19,7 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
           child: Column(
             children: [
               Image.asset('assects/images_and_logo/onboarding/onboardingTwo.png'),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Column(
                 children: [
                   const Text(
@@ -27,27 +27,27 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25.0),
                     child: Text(
                       'Enjoy a fast and smooth food delivery at\nyour doorstep',
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   CustomButton(
                     text: 'Next',
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => SignIn()));
+                          MaterialPageRoute(builder: (context) => const SignIn()));
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 50,
                   )
                 ],

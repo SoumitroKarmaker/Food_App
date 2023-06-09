@@ -15,7 +15,7 @@ class Payment_Method extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 GestureDetector(
@@ -29,29 +29,29 @@ class Payment_Method extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.green.withOpacity(0.2),
                     ),
-                    child: Align(
+                    child: const Align(
                         alignment: Alignment.center,
                         child: Icon(Icons.arrow_back_ios)),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Text(
-                  'Payment Method',
+                const Text(
+                  'Upload Your Photo\nProfile',
                   style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   'This data will be desplayed in your account\nprofile for security',
                   style: TextStyle(fontSize: 16),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Column(
@@ -70,7 +70,7 @@ class Payment_Method extends StatelessWidget {
                                 .withOpacity(0.2), // Set the shadow color
                             spreadRadius: 2, // Set the spread radius
                             blurRadius: 10, // Set the blur radius
-                            offset: Offset(0, 2), // Set the shadow offset
+                            offset: const Offset(0, 2), // Set the shadow offset
                           ),
                         ],
                       ),
@@ -83,7 +83,7 @@ class Payment_Method extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     Container(
@@ -96,7 +96,7 @@ class Payment_Method extends StatelessWidget {
                                 .withOpacity(0.2), // Set the shadow color
                             spreadRadius: 2, // Set the spread radius
                             blurRadius: 10, // Set the blur radius
-                            offset: Offset(0, 2), // Set the shadow offset
+                            offset: const Offset(0, 2), // Set the shadow offset
                           ),
                         ],
                       ),
@@ -109,7 +109,7 @@ class Payment_Method extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     Container(
@@ -122,7 +122,7 @@ class Payment_Method extends StatelessWidget {
                                 .withOpacity(0.2), // Set the shadow color
                             spreadRadius: 2, // Set the spread radius
                             blurRadius: 10, // Set the blur radius
-                            offset: Offset(0, 2), // Set the shadow offset
+                            offset: const Offset(0, 2), // Set the shadow offset
                           ),
                         ],
                       ),
@@ -135,13 +135,13 @@ class Payment_Method extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     CustomButton(text: 'Next', onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Upload_Photo()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Upload_Photo()));
                     }),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                   ],

@@ -22,7 +22,7 @@ class _SignIn_ProcessState extends State<SignIn_Process> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 GestureDetector(
@@ -36,27 +36,27 @@ class _SignIn_ProcessState extends State<SignIn_Process> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.green.withOpacity(0.2),
                     ),
-                    child: Align(
+                    child: const Align(
                         alignment: Alignment.center,
                         child: Icon(Icons.arrow_back_ios)),
                   ),
                 ),
-                SizedBox(height: 15,),
-                Text(
+                const SizedBox(height: 15,),
+                const Text(
                   'Fill in our bio to get\nstarted',
                   style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   'This data will be desplayed in your account\nprofile for security',
                   style: TextStyle(fontSize: 16),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Container(
                   // this container for apptextfield shadow
                   decoration: BoxDecoration(
@@ -67,7 +67,7 @@ class _SignIn_ProcessState extends State<SignIn_Process> {
                             .withOpacity(0.2), // Set the shadow color
                         spreadRadius: 2, // Set the spread radius
                         blurRadius: 10, // Set the blur radius
-                        offset: Offset(0, 2), // Set the shadow offset
+                        offset: const Offset(0, 2), // Set the shadow offset
                       ),
                     ],
                   ),
@@ -79,13 +79,13 @@ class _SignIn_ProcessState extends State<SignIn_Process> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
-                              color: Color(0xff15BE77).withOpacity(0.4),
+                              color: const Color(0xff15BE77).withOpacity(0.4),
                               width: 1)),
                       hintText: 'First Name',
                     ),
                   ),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Container(
                   // this container for apptextfield shadow
                   decoration: BoxDecoration(
@@ -96,7 +96,7 @@ class _SignIn_ProcessState extends State<SignIn_Process> {
                             .withOpacity(0.2), // Set the shadow color
                         spreadRadius: 2, // Set the spread radius
                         blurRadius: 10, // Set the blur radius
-                        offset: Offset(0, 2), // Set the shadow offset
+                        offset: const Offset(0, 2), // Set the shadow offset
                       ),
                     ],
                   ),
@@ -108,13 +108,13 @@ class _SignIn_ProcessState extends State<SignIn_Process> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
-                              color: Color(0xff15BE77).withOpacity(0.4),
+                              color: const Color(0xff15BE77).withOpacity(0.4),
                               width: 1)),
                       hintText: 'Last Name',
                     ),
                   ),
                 ),
-                SizedBox(height: 15,),
+                const SizedBox(height: 15,),
                 Container(
                   // this container for apptextfield shadow
                   decoration: BoxDecoration(
@@ -125,7 +125,7 @@ class _SignIn_ProcessState extends State<SignIn_Process> {
                             .withOpacity(0.2), // Set the shadow color
                         spreadRadius: 2, // Set the spread radius
                         blurRadius: 10, // Set the blur radius
-                        offset: Offset(0, 2), // Set the shadow offset
+                        offset: const Offset(0, 2), // Set the shadow offset
                       ),
                     ],
                   ),
@@ -137,17 +137,17 @@ class _SignIn_ProcessState extends State<SignIn_Process> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
-                              color: Color(0xff15BE77).withOpacity(0.4),
+                              color: const Color(0xff15BE77).withOpacity(0.4),
                               width: 1)),
                       hintText: 'Mobile Number',
                     ),
                   ),
                 ),
-                SizedBox(height: 15,),
+                const SizedBox(height: 15,),
                 Row(mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CustomButton(text: 'Next', onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Payment_Method()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Payment_Method()));
                     }),
                   ],
                 )

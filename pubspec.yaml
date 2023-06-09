@@ -64,9 +64,10 @@ flutter:
     - assects/images_and_logo/onboarding/
     - assects/images_and_logo/
     - assects/images_and_logo/splash_screen/logo.png
-    - assects/images_and_logo/accessories_logo_and_icon/facebook.png
-    - assects/images_and_logo/accessories_logo_and_icon/google.png
-    - assects/images_and_logo/accessories_logo_and_icon/paypal.png
+    - assects/images_and_logo/accessories_logo_and_icon/
+    - assects/images_and_logo/accessories_logo_and_icon/gallery.png
+    - assects/images_and_logo/accessories_logo_and_icon/location.png
+
 #     - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

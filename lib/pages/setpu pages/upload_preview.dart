@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/pages/setpu%20pages/upload_preview.dart';
+import 'package:food_app/pages/setpu%20pages/set_location.dart';
 import 'package:food_app/widgets/customButton.dart';
 
-class Upload_Photo extends StatelessWidget {
-  const Upload_Photo({Key? key}) : super(key: key);
+class Upload_Preview extends StatefulWidget {
+  const Upload_Preview({Key? key}) : super(key: key);
 
+  @override
+  State<Upload_Preview> createState() => _Upload_PreviewState();
+}
+
+class _Upload_PreviewState extends State<Upload_Preview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: SafeArea(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Column(
@@ -38,7 +43,7 @@ class Upload_Photo extends StatelessWidget {
                   height: 15,
                 ),
                 const Text(
-                  'Upload YOur Photo\nProfile',
+                  'Photo Preview',
                   style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
@@ -52,60 +57,31 @@ class Upload_Photo extends StatelessWidget {
                   style: TextStyle(fontSize: 16),
                 ),
                 const SizedBox(
-                  height: 20,
-                ),
-                Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(15),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey
-                              .withOpacity(0.2), // Set the shadow color
-                          spreadRadius: 2, // Set the spread radius
-                          blurRadius: 10, // Set the blur radius
-                          offset: const Offset(0, 2), // Set the shadow offset
-                        ),
-                      ],
-                    ),
-                    height: 150,
-                    width: MediaQuery.of(context).size.width,
-                    child: Image.asset(
-                        'assects/images_and_logo/accessories_logo_and_icon/gallery.png')),
-                const SizedBox(
-                  height: 20,
-                ),
-                Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(15),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey
-                              .withOpacity(0.2), // Set the shadow color
-                          spreadRadius: 2, // Set the spread radius
-                          blurRadius: 10, // Set the blur radius
-                          offset: const Offset(0, 2), // Set the shadow offset
-                        ),
-                      ],
-                    ),
-                    height: 150,
-                    width: MediaQuery.of(context).size.width,
-                    child: Image.asset(
-                        'assects/images_and_logo/accessories_logo_and_icon/camera.png')),
-                const SizedBox(
                   height: 30,
                 ),
-                Row(mainAxisAlignment: MainAxisAlignment.center,
+                Column(mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CustomButton(
-                        text: 'Next',
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Upload_Preview()));
-                        }),
+                    SizedBox(width: MediaQuery.of(context).size.width,),
+                    Container(height: 200,width: 200, decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey
+                              .withOpacity(0.2), // Set the shadow color
+                          spreadRadius: 2, // Set the spread radius
+                          blurRadius: 10, // Set the blur radius
+                          offset: const Offset(0, 2), // Set the shadow offset
+                        ),
+                      ],
+                    ),),
+                    const SizedBox(
+                      height: 70,
+                    ),
+                    CustomButton(text: 'Next', onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Set_Location()));
+                    }),
+                    const SizedBox(height: 30,),
                   ],
                 )
               ],

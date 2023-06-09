@@ -23,33 +23,33 @@ class _SginUpState extends State<SginUp> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
+                const SizedBox(
                   width: double.infinity,
                   height: 10,
                 ),
                 Image.asset(
                   'assects/images_and_logo/splash_screen/logo.png',
                 ),
-                Text(
+                const Text(
                   'FoodNinja',
                   style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       color: AppColor.mainColor),
                 ),
-                Text(
+                const Text(
                   'Deliever Favourite Food',
                   style: TextStyle(fontSize: 15, color: Colors.black54),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
-                Text('Sign Up For Free',
+                const Text('Sign Up For Free',
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -62,14 +62,14 @@ class _SginUpState extends State<SginUp> {
                             .withOpacity(0.2), // Set the shadow color
                         spreadRadius: 2, // Set the spread radius
                         blurRadius: 10, // Set the blur radius
-                        offset: Offset(0, 2), // Set the shadow offset
+                        offset: const Offset(0, 2), // Set the shadow offset
                       ),
                     ],
                   ),
                   child: AppTextField(
                     textFieldType: TextFieldType.NAME,
                     decoration: InputDecoration(
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.person,
                         color: AppColor.mainColor,
                       ),
@@ -78,13 +78,13 @@ class _SginUpState extends State<SginUp> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
-                              color: Color(0xff15BE77).withOpacity(0.4),
+                              color: const Color(0xff15BE77).withOpacity(0.4),
                               width: 1)),
                       hintText: 'User Name',
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -97,14 +97,14 @@ class _SginUpState extends State<SginUp> {
                             .withOpacity(0.2), // Set the shadow color
                         spreadRadius: 2, // Set the spread radius
                         blurRadius: 10, // Set the blur radius
-                        offset: Offset(0, 2), // Set the shadow offset
+                        offset: const Offset(0, 2), // Set the shadow offset
                       ),
                     ],
                   ),
                   child: AppTextField(
                     textFieldType: TextFieldType.NAME,
                     decoration: InputDecoration(
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.mail,
                         color: AppColor.mainColor,
                       ),
@@ -113,13 +113,13 @@ class _SginUpState extends State<SginUp> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
-                              color: Color(0xff15BE77).withOpacity(0.4),
+                              color: const Color(0xff15BE77).withOpacity(0.4),
                               width: 1)),
                       hintText: 'Email',
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -132,14 +132,14 @@ class _SginUpState extends State<SginUp> {
                             .withOpacity(0.2), // Set the shadow color
                         spreadRadius: 2, // Set the spread radius
                         blurRadius: 10, // Set the blur radius
-                        offset: Offset(0, 2), // Set the shadow offset
+                        offset: const Offset(0, 2), // Set the shadow offset
                       ),
                     ],
                   ),
                   child: AppTextField(
                     textFieldType: TextFieldType.PASSWORD,
                     decoration: InputDecoration(
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.lock,
                         color: AppColor.mainColor,
                       ),
@@ -148,7 +148,7 @@ class _SginUpState extends State<SginUp> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
-                              color: Color(0xff15BE77).withOpacity(0.4),
+                              color: const Color(0xff15BE77).withOpacity(0.4),
                               width: 1)),
                       hintText: 'Password',
                     ),
@@ -156,7 +156,7 @@ class _SginUpState extends State<SginUp> {
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     SizedBox(
                       height: 15,
                       width: double.infinity,
@@ -168,19 +168,19 @@ class _SginUpState extends State<SginUp> {
                     Text('Email Me About Special Pricing'),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 CustomButton(width: 150, text: 'Create Acount', onTap: () {}),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => SignIn()));
+                          MaterialPageRoute(builder: (context) => const SignIn()));
                     },
-                    child: Text('Already have an acount?')),
+                    child: const Text('Already have an acount?')),
               ],
             ),
           ),
