@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/pages/setpu%20pages/setup_complete.dart';
+import 'package:food_app/widgets/customButton.dart';
 
 class Set_Location extends StatelessWidget {
   const Set_Location({Key? key}) : super(key: key);
@@ -82,17 +84,17 @@ class Set_Location extends StatelessWidget {
                                 height: 50,
                                 width: 50,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 15,
                               ),
-                              Text(
+                              const Text(
                                 'Your Location',
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.bold),
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           GestureDetector(
@@ -104,28 +106,37 @@ class Set_Location extends StatelessWidget {
                                 color: Colors.grey[200],
                                 boxShadow: [
                                   BoxShadow(
-                                      offset: Offset(2, 3),
+                                      offset: const Offset(2, 3),
                                       spreadRadius: 2,
                                       blurRadius: 7,
                                       color: Colors.black.withOpacity(0.2))
                                 ],
                                 borderRadius: BorderRadius.circular(10),
                               ),
-                              child: Center(
+                              child: const Center(
                                   child: Text(
                                 'Set Location',
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontSize: 17, fontWeight: FontWeight.bold),
                               )),
                             ),
                           ),
-                          SizedBox(height: 30,),
+                          const SizedBox(height: 30,),
                         ],
                       ),
                     )
                   ],
-                )
+                ),
+              const SizedBox(height: 30,),
+              Row(mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomButton(text: 'Next', onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const SetUp_Complete()));
+                  }),
+                ],
+              ),
               ],
+              
             ),
           ),
         ),
